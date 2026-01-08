@@ -1,18 +1,13 @@
-# ☀️ 智慧型日照感應自動控制系統 (Smart Sun-Sensing System)
+# ☀️ 智慧型日照感應自動控制系統 (Sprinkler-system)
 
 本專案為一套基於 8051 微控制器的自動化控制系統，整合了 **BH1750 數位光照感測器** (I2C) 與 **SG90 伺服馬達** (PWM)。系統能實時監測環境亮度，並根據預設閾值自動執行動作（如自動遮陽或啟動灑水），同時支援 UART 遠端監控調試。
 
 ## 📂 專案結構
 
 ```text
-smart_sun_sensing/
+Sprinkler-system/
 ├── main.c              # 主程式邏輯 (系統初始化、閥值判斷)
-├── bh1750.c            # BH1750 感測器驅動 (I2C Bit-banging)
-├── servo_control.c     # PWM 產生與預運算邏輯 (Timer2 驅動)
-├── uart_debug.c        # UART 通訊模組 (監控 Lux 數值)
-├── delay_lib.c         # 軟體微秒延遲庫 (解決硬體資源衝突)
-├── REG_MPC82G516.h     # MPC82G516 特殊功能暫存器定義
-└── Makefile            # Keil uVision 編譯配置說明
+└── README.md            # 系統說明
 
 ```
 
